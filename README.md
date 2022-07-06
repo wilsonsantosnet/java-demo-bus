@@ -10,8 +10,8 @@ az servicebus queue create --resource-group bus-poc --namespace-name seed-bus-pr
 
 # Exemplos com Java Console (pacote azure-messaging-servicebus)
 
-1.[service-bus-java-how-to-use-queues](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-java-how-to-use-queues)
-1.[create-a-service-bus-client-using-microsoft-identity-platform-formerly-azure-active-directory](https://docs.microsoft.com/en-us/java/api/overview/azure/messaging-servicebus-readme?view=azure-java-stable#create-a-service-bus-client-using-microsoft-identity-platform-formerly-azure-active-directory)
+1. [service-bus-java-how-to-use-queues](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-java-how-to-use-queues)
+1. [create-a-service-bus-client-using-microsoft-identity-platform-formerly-azure-active-directory](https://docs.microsoft.com/en-us/java/api/overview/azure/messaging-servicebus-readme?view=azure-java-stable#create-a-service-bus-client-using-microsoft-identity-platform-formerly-azure-active-directory)
 
 # Exemplo Spring Boot (pacote spring-cloud-azure-starter-servicebus-jms)
 
