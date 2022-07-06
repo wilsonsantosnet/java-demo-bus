@@ -28,6 +28,8 @@ az servicebus topic subscription create --resource-group pocs --namespace-name s
 
 # Exemplos com Java Console (pacote azure-messaging-servicebus)
 
+1. [demoSender](https://github.com/wilsonsantosnet/java-demo-bus/tree/main/demoSender)
+1. [demoreciver](https://github.com/wilsonsantosnet/java-demo-bus/tree/main/demoreciver)
 1. [service-bus-java-how-to-use-queues](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-java-how-to-use-queues)
 
 ## Azure Active Directory (RBAC)
@@ -38,8 +40,14 @@ az servicebus topic subscription create --resource-group pocs --namespace-name s
 
 # Exemplo Spring Boot (pacote spring-cloud-azure-starter-servicebus-jms)
 
+1. [singlewebappbus](https://github.com/wilsonsantosnet/java-demo-bus/tree/main/springboot/singlewebappbus)
 1. [configure-spring-boot-starter-java-app-with-azure-service-bus](https://docs.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-service-bus)
 1. [start.spring.io](https://start.spring.io)
+
+
+# Exemplo Spring Boot (pacote azure-messaging-servicebus e azure-identity)
+
+1. [springboot-sdkms](https://github.com/wilsonsantosnet/java-demo-bus/tree/main/springboot-sdkms)
 
 # ServiceBusExplorer
 
