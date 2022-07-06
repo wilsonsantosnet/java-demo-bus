@@ -24,7 +24,7 @@ az servicebus topic subscription create --resource-group pocs --namespace-name s
 
 # Documentação Azure CLI
 
-1. [cli-net-core-principais-comandos](https://wilsonsantosnet.medium.com/cli-net-core-principais-comandos-d728b0e16634)
+1. [azure-cli-principais-comandos](https://wilsonsantosnet.medium.com/azure-cli-1bf726fa855c)
 
 # Exemplos com Java Console (pacote azure-messaging-servicebus)
 
