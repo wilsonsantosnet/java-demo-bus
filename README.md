@@ -22,7 +22,7 @@ az servicebus topic subscription create --resource-group pocs --namespace-name s
 ```
 
 
-# Azure CLI
+# Documentação Azure CLI
 
 1. [cli-net-core-principais-comandos](https://wilsonsantosnet.medium.com/cli-net-core-principais-comandos-d728b0e16634)
 
@@ -35,5 +35,9 @@ az servicebus topic subscription create --resource-group pocs --namespace-name s
 
 1. [configure-spring-boot-starter-java-app-with-azure-service-bus](https://docs.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-service-bus)
 1. [start.spring.io](https://start.spring.io)
+
+#ServiceBusExplorer
+
+1. [ServiceBusExplorer](https://github.com/paolosalvatori/ServiceBusExplorer)
 
 
