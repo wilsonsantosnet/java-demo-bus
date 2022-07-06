@@ -1,6 +1,11 @@
 package demo;
 
+import com.azure.identity.ClientSecretCredential;
+import com.azure.identity.ClientSecretCredentialBuilder;
 import com.azure.messaging.servicebus.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.Arrays;
 import java.util.List;
 /**
@@ -9,12 +14,13 @@ import java.util.List;
  */
 public class App 
 {
-    static String connectionString = "Endpoint=sb://seed-bus-p.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xtfuxbivZy+gMq56+PHya52vycgcFGxVV1Ac2VUERHM=";
+    static String connectionString = "Endpoint=sb://seed-bus-pr.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=/uO585mW9T1CzLEo4RxVZb2C4sBVPltFt6YS7V16ljc=";
     static String queueName = "queuesampleseed"; 
 
-    public static void main( String[] args )
+    public static void main( String[] args ) throws JsonProcessingException
     {
-        sendMessageBatch();
+        //sendMessageBatch();
+        sendMessage();
     }
 
     static void sendMessageBatch()
@@ -73,17 +79,35 @@ public class App
         return Arrays.asList(messages);
     }
 
-    static void sendMessage()
+    static void sendMessage() throws JsonProcessingException
     {
+        String tenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47";
+        String clientId = "a4624d1c-dc11-4336-afc6-6dfad792302c";
+        String clientSecret = "rXx8Q~jOuVsSxAIW-.JphSQ8MhWz6GWKU41AXcEI";
+        String endpoint = "seed-bus-pr.servicebus.windows.net";
+
+        ClientSecretCredential credential = new ClientSecretCredentialBuilder()
+            .tenantId(tenantId)
+            .clientId(clientId)
+            .clientSecret(clientSecret)
+            .build();
+            
         // create a Service Bus Sender client for the queue 
         ServiceBusSenderClient senderClient = new ServiceBusClientBuilder()
-                .connectionString(connectionString)
+                //.connectionString(connectionString)
+                .credential(endpoint, credential)
                 .sender()
                 .queueName(queueName)
                 .buildClient();
 
         // send one message to the queue
-        senderClient.sendMessage(new ServiceBusMessage("Hello, World!"));
+        ObjectMapper mapper = new ObjectMapper();
+        User user = new User("Wilson");
+        String userJson = mapper.writeValueAsString(user);
+
+        ServiceBusMessage msg = new ServiceBusMessage(userJson);
+        msg.setContentType("application/json");
+        senderClient.sendMessage(msg);
         System.out.println("Sent a single message to the queue: " + queueName);        
     }
 }

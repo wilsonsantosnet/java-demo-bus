@@ -1,5 +1,9 @@
 package demoreciver;
 
+import com.azure.core.credential.TokenCredential;
+import com.azure.identity.ClientSecretCredential;
+import com.azure.identity.ClientSecretCredentialBuilder;
+import com.azure.identity.DefaultAzureCredentialBuilder;
 import com.azure.messaging.servicebus.*;
 
 import java.util.concurrent.CountDownLatch;
@@ -23,9 +27,24 @@ public class App
     {
         CountDownLatch countdownLatch = new CountDownLatch(1);
 
+        String tenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47";
+        String clientId = "a4624d1c-dc11-4336-afc6-6dfad792302c";
+        String clientSecret = "rXx8Q~jOuVsSxAIW-.JphSQ8MhWz6GWKU41AXcEI";
+        String endpoint = "seed-bus-pr.servicebus.windows.net";
+
+        ClientSecretCredential credential = new ClientSecretCredentialBuilder()
+            .tenantId(tenantId)
+            .clientId(clientId)
+            .clientSecret(clientSecret)
+            .build();
+        
+        // TokenCredential credential = new DefaultAzureCredentialBuilder()
+        //     .build();
+
         // Create an instance of the processor through the ServiceBusClientBuilder
         ServiceBusProcessorClient processorClient = new ServiceBusClientBuilder()
-            .connectionString(connectionString)
+            //.connectionString(connectionString)
+            .credential(endpoint, credential)
             .processor()
             .queueName(queueName)
             .processMessage(App::processMessage)
