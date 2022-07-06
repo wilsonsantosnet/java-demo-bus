@@ -1,22 +1,22 @@
 # Azure CLI
 
-Criar uma instancia
+## Criar uma instancia
 ```
 az servicebus namespace create --resource-group bus-poc --name seed-bus-pr --location westus --tags tag1=departamentoA tag2=Company --sku Premium
 ```
 
-Criar uma fila
+## Criar uma fila
 ```
 az servicebus queue create --resource-group bus-poc --namespace-name seed-bus-pr --name queueSampleSeed 
 ```
 
-criar um tópico
+## criar um tópico
 
 ```
 az servicebus topic create --resource-group pocs --namespace-name seed-bus-p --name topicSampleSeed 
 ```
 
-Assinar um tópico
+## Assinar um tópico
 ```
 az servicebus topic subscription create --resource-group pocs --namespace-name seed-bus-p --topic-name topicSampleSeed --name consumer1
 ```
