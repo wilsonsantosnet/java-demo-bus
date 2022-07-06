@@ -29,7 +29,12 @@ az servicebus topic subscription create --resource-group pocs --namespace-name s
 # Exemplos com Java Console (pacote azure-messaging-servicebus)
 
 1. [service-bus-java-how-to-use-queues](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-java-how-to-use-queues)
+
+## Azure Active Directory (RBAC)
+
+1. [service-bus-authentication-and-authorization](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-authentication-and-authorization)
 1. [create-a-service-bus-client-using-microsoft-identity-platform-formerly-azure-active-directory](https://docs.microsoft.com/en-us/java/api/overview/azure/messaging-servicebus-readme?view=azure-java-stable#create-a-service-bus-client-using-microsoft-identity-platform-formerly-azure-active-directory)
+
 
 # Exemplo Spring Boot (pacote spring-cloud-azure-starter-servicebus-jms)
 
