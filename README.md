@@ -10,7 +10,7 @@ az servicebus namespace create --resource-group bus-poc --name seed-bus-pr --loc
 az servicebus queue create --resource-group bus-poc --namespace-name seed-bus-pr --name queueSampleSeed 
 ```
 
-## criar um tópico
+## Criar um tópico
 
 ```
 az servicebus topic create --resource-group pocs --namespace-name seed-bus-p --name topicSampleSeed 
