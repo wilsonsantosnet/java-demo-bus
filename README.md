@@ -1,9 +1,9 @@
 # Azure CLI
 
 Criar uma instancia
-´´´
+```
 az servicebus namespace create --resource-group bus-poc --name seed-bus-pr --location westus --tags tag1=departamentoA tag2=Company --sku Premium
-´´´
+```
 
 Criar uma fila
 ```
