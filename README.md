@@ -53,4 +53,9 @@ az servicebus topic subscription create --resource-group pocs --namespace-name s
 
 1. [ServiceBusExplorer](https://github.com/paolosalvatori/ServiceBusExplorer)
 
+# Segurança e Protocolo AMQP
+1. [connections-and-sessions](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-amqp-protocol-guide#connections-and-sessions)
+
+
+
 
