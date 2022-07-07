@@ -32,10 +32,11 @@ az servicebus topic subscription create --resource-group pocs --namespace-name s
 1. [demoreciver](https://github.com/wilsonsantosnet/java-demo-bus/tree/main/demoreciver)
 1. [service-bus-java-how-to-use-queues](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-java-how-to-use-queues)
 
-## Azure Active Directory (RBAC)
+## Azure Active Directory (RBAC / SAS)
 
 1. [service-bus-authentication-and-authorization](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-authentication-and-authorization)
 1. [create-a-service-bus-client-using-microsoft-identity-platform-formerly-azure-active-directory](https://docs.microsoft.com/en-us/java/api/overview/azure/messaging-servicebus-readme?view=azure-java-stable#create-a-service-bus-client-using-microsoft-identity-platform-formerly-azure-active-directory)
+1. [authenticate-application](https://docs.microsoft.com/en-us/azure/service-bus-messaging/authenticate-application?tabs=dotnet)
 
 
 # Exemplo Spring Boot (pacote spring-cloud-azure-starter-servicebus-jms)
