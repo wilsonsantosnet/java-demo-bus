@@ -3,6 +3,7 @@ package sdkms.example.demo.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.azure.core.util.ClientOptions;
 import com.azure.identity.ClientSecretCredential;
 import com.azure.identity.ClientSecretCredentialBuilder;
 import com.azure.messaging.servicebus.ServiceBusClientBuilder;
@@ -32,6 +33,8 @@ public class HomeController {
             .clientSecret(clientSecret)
             .build();
             
+        ; 
+
         // create a Service Bus Sender client for the queue 
         ServiceBusSenderClient senderClient = new ServiceBusClientBuilder()
                 //.connectionString(connectionString)
