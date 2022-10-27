@@ -22,9 +22,9 @@ public class HomeController {
     public String GetMessage() throws JsonProcessingException {
         
         String queueName = "queuesampleseed"; 
-        String tenantId = "72f988bf-86f1-41af-91ab-2d7cd011db47";
+        String tenantId = "779811d8-4753-4c34-baeb-6b53957d52e3";
         String clientId = "a4624d1c-dc11-4336-afc6-6dfad792302c";
-        String clientSecret = "rXx8Q~jOuVsSxAIW-.JphSQ8MhWz6GWKU41AXcEI";
+        String clientSecret = "...";
         String endpoint = "seed-bus-pr.servicebus.windows.net";
 
         ClientSecretCredential credential = new ClientSecretCredentialBuilder()
